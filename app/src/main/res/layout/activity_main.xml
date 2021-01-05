@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:background="@color/colorAccent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Check-List de Segurança"
+            android:textColor="#ffff"
+            android:gravity="center_horizontal"
+            android:textSize="20sp"/>
+        </androidx.appcompat.widget.Toolbar>
+    <Space
+        android:layout_width="10sp"
+        android:layout_height="10sp"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextClock
+                android:textColor="#fff"
+                android:id="@+id/hora"
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+
+
+        <EditText
+            android:visibility="invisible"
+            android:focusable="false"
+            android:enabled="true"
+            android:id="@+id/data"
+            android:textSize="20sp"
+            android:textColor="#000"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal"
+            android:layout_width="330sp"
+            android:layout_height="1dp"
+            android:text="">
+        </EditText>
+            <Space
+                android:layout_width="10sp"
+                android:layout_height="10sp"/>
+            <EditText
+                android:focusable="false"
+                android:layout_width="330sp"
+                android:textStyle="bold"
+                android:padding="12sp"
+                android:textColor="@color/colorAccent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:drawableEnd="@drawable/arrow"
+                android:hint="Selecione o equipamento."
+                android:id="@+id/equipamento"/>
+            <Space
+                android:layout_width="10sp"
+                android:layout_height="10sp"/>
+        <TextView
+            android:textSize="22sp"
+            android:textColor="@color/colorAccent"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Turno"/>
+            <Space
+                android:layout_width="10sp"
+                android:layout_height="10sp"/>
+            <RadioGroup
+                android:id="@+id/radioGroupTurno"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="12sp"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="50sp">
+                <RadioButton
+                    android:id="@+id/rdbPrimeiroTurno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="1º Turno"
+                    android:textSize="20sp"
+                    android:visibility="visible" />
+                <Space
+                    android:layout_width="5sp"
+                    android:layout_height="0sp"/>
+                <RadioButton
+                    android:visibility="visible"
+                    android:id="@+id/rdbSegundoTurno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:text="2º Turno"/>
+                <Space
+                    android:layout_width="5sp"
+                    android:layout_height="0sp"/>
+                <RadioButton
+                    android:visibility="visible"
+                    android:id="@+id/rdbTerceiroTurno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:text="3º Turno"/>
+            </RadioGroup>
+            <Space
+                android:layout_width="10sp"
+                android:layout_height="15sp"/>
+            <TextView
+                android:textColor="@color/colorAccent"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="As proteções fixas estão em ordem?"/>
+            <RadioGroup
+                android:id="@+id/RGPF"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_height="match_parent">
+                <RadioButton
+                    android:id="@+id/rdbProtecaoFixaSim"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sim"
+                    android:checked="true"
+                    android:textSize="20sp"/>
+                <Space
+                    android:layout_width="30sp"
+                    android:layout_height="10sp"/>
+                <RadioButton
+                    android:id="@+id/rdbProtecaoFixaNao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Não"
+                    android:textSize="20sp"/>
+            </RadioGroup>
+            <Space
+                android:layout_width="10sp"
+                android:layout_height="15sp"/>
+            <TextView
+                android:textColor="@color/colorAccent"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="As botoeiras de emergência estão em ordem?"/>
+            <RadioGroup
+                android:id="@+id/RGBTEMER"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_height="match_parent">
+                <RadioButton
+                    android:id="@+id/rdbBtnEmergenciaSim"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sim"
+                    android:checked="true"
+                    android:textSize="20sp"/>
+
+                <Space
+                    android:layout_width="30sp"
+                    android:layout_height="10sp"/>
+                <RadioButton
+                    android:id="@+id/rdbbtnEmergenciaNao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Não"
+                    android:textSize="20sp"/>
+
+            </RadioGroup>
+            <Space
+                android:layout_width="10sp"
+                android:layout_height="15sp"/>
+
+            <Space
+                android:layout_width="10sp"
+                android:layout_height="15sp"/>
+            <TextView
+                android:textColor="@color/colorAccent"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Os micros de segurança estão em ordem?"/>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:id="@+id/RGBTMICRO"
+                android:layout_height="match_parent">
+                <RadioButton
+                    android:id="@+id/rdbMicroEmergenciaSim"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sim"
+                    android:checked="true"
+                    android:textSize="20sp"/>
+                <Space
+                    android:layout_width="30sp"
+                    android:layout_height="10sp"/>
+                <RadioButton
+                    android:id="@+id/rdbMicroEmergenciaNao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Não"
+                    android:textSize="20sp"/>
+
+            </RadioGroup>
+            <Space
+                android:layout_width="10sp"
+                android:layout_height="15sp"/>
+
+            <Space
+                android:layout_width="10sp"
+                android:layout_height="15sp"/>
+            <TextView
+                android:textColor="@color/colorAccent"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="As cortinas de luz estão em ordem?"/>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:id="@+id/RGBTCORTINA"
+                android:layout_height="match_parent">
+                <RadioButton
+                    android:id="@+id/rdbCortinaLuzSim"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sim"
+                    android:checked="true"
+                    android:textSize="20sp"/>
+                <Space
+                    android:layout_width="30sp"
+                    android:layout_height="10sp"/>
+                <RadioButton
+                    android:id="@+id/rdbCortinaLuzNao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Não"
+                    android:textSize="20sp"/>
+
+            </RadioGroup>
+            <Space
+                android:layout_width="10sp"
+                android:layout_height="15sp"/>
+            <Space
+                android:layout_width="10sp"
+                android:layout_height="15sp"/>
+            <TextView
+                android:textColor="@color/colorAccent"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Os dispositivos para remoção de refilos estão disponíveis?"/>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:id="@+id/RGBTREFILO"
+                android:layout_height="match_parent">
+                <RadioButton
+                    android:id="@+id/rdbRemocaoRefiloSim"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sim"
+                    android:checked="true"
+                    android:textSize="20sp"/>
+                <Space
+                    android:layout_width="30sp"
+                    android:layout_height="10sp"/>
+                <RadioButton
+                    android:id="@+id/rdbRemocaoRefiloNao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Não"
+                    android:textSize="20sp"/>
+
+            </RadioGroup>
+            <Space
+                android:layout_width="10sp"
+                android:layout_height="15sp"/>
+            <Space
+                android:layout_width="10sp"
+                android:layout_height="15sp"/>
+            <TextView
+                android:textColor="@color/colorAccent"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Os quadros elétricos estão fechados?"/>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:id="@+id/RGBTQUADRO"
+                android:layout_height="match_parent">
+                <RadioButton
+                    android:id="@+id/rdbQuadroEletricoSim"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sim"
+                    android:checked="true"
+                    android:textSize="20sp"/>
+                <Space
+                    android:layout_width="30sp"
+                    android:layout_height="10sp"/>
+                <RadioButton
+                    android:id="@+id/rdbQuadroEletricoNao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/n_o"
+                    android:textSize="20sp"/>
+
+            </RadioGroup>
+            <Space
+                android:layout_width="10sp"
+                android:layout_height="15sp"/>
+
+            <Space
+                android:layout_width="10sp"
+                android:layout_height="15sp"/>
+            <TextView
+                android:textColor="@color/colorAccent"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/o_ambiente_de_trabalho_est_limpo_e_organizado"/>
+
+            <RadioGroup
+                android:id="@+id/RGBTAMBIENTE"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_height="match_parent">
+                <RadioButton
+                    android:id="@+id/rdbAmbienteSim"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sim"
+                    android:checked="true"
+                    android:textSize="20sp"/>
+                <Space
+                    android:layout_width="30sp"
+                    android:layout_height="10sp"/>
+                <RadioButton
+                    android:id="@+id/rdbAmbienteNao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Não"
+                    android:textSize="20sp"/>
+
+            </RadioGroup>
+            <Space
+                android:layout_width="10sp"
+                android:layout_height="15sp"/>
+
+            <EditText
+                android:id="@+id/observacao"
+                android:textColor="#000"
+                android:textSize="20sp"
+                android:inputType="textCapSentences"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="10sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/obser"
+                android:gravity="center"/>
+
+
+            <Space
+                android:layout_width="10sp"
+                android:layout_height="15sp"/>
+
+
+            <Button
+                android:id="@+id/Confirmar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="#fff"
+                android:background="@color/colorAccent"
+                android:gravity="center"
+                android:text="Confirmar"/>
+
+
+
+
+
+
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+    
+
+
+</LinearLayout>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "217659590902",
+    "project_id": "check-list-29116",
+    "storage_bucket": "check-list-29116.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:217659590902:android:b9a210108eb9f2bdc004d7",
+        "android_client_info": {
+          "package_name": "com.example.check_listdesegurana"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "217659590902-0fc9bmpo9cc54erd8q7f7s3bbq79mrrg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCiNJXzxTvWTzg4soMvkHQKb41A4TpGB8M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "217659590902-0fc9bmpo9cc54erd8q7f7s3bbq79mrrg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
